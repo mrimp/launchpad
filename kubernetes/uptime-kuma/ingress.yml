@@ -8,8 +8,10 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`uptime.local.example.com`)
+    - match: Host(`uptime.lan.day-off.net`)
       kind: Rule
       services:
         - name: uptime-kuma
           port: 3001
+  tls:
+    secretName: lan-day-off-net
